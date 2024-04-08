@@ -9,5 +9,9 @@ const { title } = Astro.props;
 ---
 
 <Layout title={title}>
-  <slot />
+  <div class="login">
+    <div class="form-container">
+      <slot />
+    </div>
+  </div>
 </Layout>
