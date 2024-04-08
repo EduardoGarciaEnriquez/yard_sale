@@ -1,0 +1,36 @@
+---
+import SecondaryButton from "../ui/secondary_button.astro";
+---
+
+<div class="login">
+    <div class="container">
+        <h1 class="title">My account</h1>
+        <form action="/" class="form">
+          <label for="name" class="label"> Name </label>
+          <input
+            disabled
+            type="text"
+            class="input input-name"
+            id="name"
+            placeholder="Full name"
+          />
+          <label for="email" class="label"> Email address </label>
+          <input
+            disabled
+            type="email"
+            class="input input-email"
+            id="email"
+            placeholder="example@email.com"
+          />
+          <label for="password" class="label"> Password </label>
+          <input
+            disabled
+            type="password"
+            class="input input-password"
+            id="password"
+            placeholder="Password"
+          />
+          <SecondaryButton>Edit</SecondaryButton>
+        </form>
+    </div>
+  </div>
