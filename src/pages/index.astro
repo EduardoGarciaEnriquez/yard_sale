@@ -1,11 +1,25 @@
 ---
+import Card from "../components/ui/card.astro";
 import Layout from "../layouts/Layout.astro";
+
+const ITEMS = [
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+];
 ---
 
 <Layout title="Yard Sale">
   <main>
-    dashboard
+    <section class="main-container">
+      <div class="cards-container">
+        {ITEMS.map(({ title, price }) => <Card title={title} price={price} />)}
+      </div>
+    </section>
   </main>
 </Layout>
-
-<style></style>
