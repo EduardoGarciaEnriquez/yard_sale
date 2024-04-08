@@ -1,0 +1,25 @@
+---
+import Logo from "../ui/logo.astro";
+import PrimaryButton from "../ui/primary_button.astro";
+---
+
+<>
+  <Logo/>
+  <form action="/" class="form">
+    <label for="email" class="label"> Email address </label>
+    <input
+      type="email"
+      class="input input-email"
+      id="email"
+      placeholder="example@email.com"
+    />
+    <label for="password" class="label"> Password </label>
+    <input
+      type="password"
+      class="input input-password"
+      id="password"
+      placeholder="Password"
+    />
+    <PrimaryButton>Confirm</PrimaryButton>
+  </form>
+</>

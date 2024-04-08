@@ -1,0 +1,13 @@
+---
+import AuthLayout from "../layouts/AuthLayout.astro";
+import LoginForm from "../components/auth/login_form.astro";
+import SecondaryButton from "../components/ui/secondary_button.astro"
+---
+
+<AuthLayout title="Login | Yard Sale">
+  <>
+    <LoginForm />
+    <p class="resend"><a href="/">Forgot my password</a></p>
+    <SecondaryButton>Sign up</SecondaryButton>
+  </>
+</AuthLayout>
