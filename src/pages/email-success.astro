@@ -1,13 +1,13 @@
 ---
 import AuthLayout from "../layouts/AuthLayout.astro";
-import logo from "../assets/logos/logo_yard_sale.svg";
 import envelope from "../assets/icons/email.svg";
 import PrimaryButton from "../components/ui/primary_button.astro";
+import Logo from "../components/ui/logo.astro";
 ---
 
 <AuthLayout title="Email Sent | Yard Sale">
   <>
-    <img src={logo.src} alt="yard-sale-logo" class="logo" />
+    <Logo />
     <h1 class="title">Email has been sent!</h1>
     <p class="subtitle">
       Please checkout your inbox for instructions on how to reset your password.
