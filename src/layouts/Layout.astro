@@ -43,6 +43,9 @@ const { title } = Astro.props;
     font-family: "Quicksand", sans-serif;
     margin: 0;
   }
+  main {
+    padding-top: 70px;
+  }
 
   p a {
     color: var(--hospital-green);
@@ -139,6 +142,11 @@ const { title } = Astro.props;
     position: absolute;
     bottom: 10px;
     width: 100%;
+  }
+
+  .login .form-container .form-container .primary-button,
+  .form-container .login-button {
+    position: inherit;
   }
 
   .secondary-button {
@@ -393,7 +401,82 @@ const { title } = Astro.props;
     font-weight: bold;
   }
 
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5%;
+    margin: 0 auto;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--white);
+  }
+
+  nav .menu {
+    height: 20px;
+  }
+
+  .navbar-left {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navbar-right {
+    justify-content: end;
+    width: auto;
+  }
+
+  .navbar-right li {
+    position: relative;
+  }
+
+  .navbar-right ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-right .cart span {
+    position: absolute;
+    top: 0;
+    right: -2px;
+    background-color: var(--hospital-green);
+    height: 5px;
+    width: 5px;
+    padding: 2px;
+    border-radius: 50%;
+  }
+
+  .cart img {
+    height: 30px;
+  }
+
+  nav .logo {
+    height: 25px;
+    margin: 0;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+
+  nav .navbar-left ul,
+  nav .navbar-right ul li:nth-child(1) {
+    display: none;
+  }
+
   @media (min-width: 768px) {
+    body {
+      padding-top: 20px;
+    }
+
     .logo {
       display: none;
     }
@@ -413,6 +496,48 @@ const { title } = Astro.props;
     .card img {
       width: 240px;
       height: 240px;
+    }
+
+    nav .logo {
+      display: block;
+    }
+
+    nav .menu {
+      display: none;
+    }
+
+    nav .navbar-left {
+      justify-content: start;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    nav .navbar-left ul,
+    nav .navbar-right ul li:nth-child(1) {
+      display: flex;
+      align-items: center;
+    }
+
+    nav .navbar-left ul {
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .navbar-left ul li:not(:nth-child(1)) a {
+      color: var(--very-light-pink);
+    }
+
+    .navbar-left ul li:nth-child(1) a {
+      color: var(--hospital-green);
+      font-weight: bold;
+      border: 1px solid var(--hospital-green);
+      padding: 4px 12px;
+      border-radius: 4px;
+    }
+
+    .navbar-right ul {
+      gap: 24px;
     }
   }
 </style>

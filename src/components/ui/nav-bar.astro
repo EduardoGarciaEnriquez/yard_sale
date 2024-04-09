@@ -1,0 +1,43 @@
+---
+import Logo from "./logo.astro";
+import menuIcon from "../../assets/icons/icon_menu.svg";
+import cartIcon from "../../assets/icons/icon_shopping_cart.svg";
+---
+
+<nav>
+  <img src={menuIcon.src} alt="menu-icon" class="menu" />
+  <div class="navbar-left">
+    <Logo />
+
+    <ul>
+      <li>
+        <a href="/">All</a>
+      </li>
+      <li>
+        <a href="/">Clothes</a>
+      </li>
+      <li>
+        <a href="/">Electronics</a>
+      </li>
+      <li>
+        <a href="/">Furnitures</a>
+      </li>
+      <li>
+        <a href="/">Toys</a>
+      </li>
+      <li>
+        <a href="/">Others</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="navbar-right">
+    <ul>
+      <li>example@email.com</li>
+      <li class="cart">
+        <img src={cartIcon.src} alt="shopping-cart-icon" />
+        <span/>
+      </li>
+    </ul>
+  </div>
+</nav>
