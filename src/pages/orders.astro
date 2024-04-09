@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import arrow from "../assets/icons/flechita.svg";
+
+const ORDERS = [
+  { total: 120.0, date: "08.04.2024", items: 9 },
+  { total: 120.0, date: "08.04.2024", items: 3 },
+  { total: 120.0, date: "08.04.2024", items: 5 },
+  { total: 120.0, date: "08.04.2024", items: 7 },
+];
+---
+
+<Layout title="My orders | Yard Sale">
+  <div class="orders-container">
+    {
+      ORDERS.map(({ date, total, items }) => (
+        <div class="order-info">
+          <div>
+            <p>{date}</p>
+            <p>{items} articles</p>
+          </div>
+          <p>
+            $ {total} <img src={arrow.src} alt="arrow-icon" />
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</Layout>

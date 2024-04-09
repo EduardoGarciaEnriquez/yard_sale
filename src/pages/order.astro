@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+const ITEMS = [
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+];
+
+const total = ITEMS.reduce(
+  (accumulator, currentValue) => accumulator + currentValue.price,
+  0
+);
+---
+
+<Layout title="My orders | Yard Sale">
+  <div class="order-container">
+    <div class="order-info">
+      <div>
+        <p>04.05.2024</p>
+        <p>{ITEMS.length} articles</p>
+      </div>
+      <p>${total}</p>
+    </div>
+
+    <div class="order-list">
+      {
+        ITEMS.map(({ price, title }) => (
+          <div class="order-item">
+            <img
+              src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="item-image"
+            />
+            <div class="item-info">
+              <p>{title}</p>
+              <p>${price}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
