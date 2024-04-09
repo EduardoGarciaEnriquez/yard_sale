@@ -263,6 +263,45 @@ const { title } = Astro.props;
     color: var(--hospital-green);
   }
 
+  .mobile-menu {
+  }
+
+  .mobile-menu ul {
+    padding: 24px 0 0 24px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .mobile-menu ul:nth-child(2) li:nth-child(1) {
+    padding-top: 24px;
+    margin-right: 24px;
+    border-top: solid 1px var(--text-input-field);
+  }
+
+  .mobile-menu ul:not(:last-child) li a {
+    font-weight: bold;
+    font-size: var(--md);
+    color: var(--black);
+  }
+
+  .mobile-menu ul:last-child {
+    position: absolute;
+    bottom: 12px;
+    font-size: var(--sm);
+  }
+
+  .mobile-menu ul:last-child li:nth-child(1) a {
+    color: var(--very-light-pink);
+  }
+
+  .mobile-menu ul:last-child li:nth-child(2) a {
+    font-weight: bold;
+    color: var(--hospital-green);
+  }
+
   @media (min-width: 768px) {
     .logo {
       display: none;
