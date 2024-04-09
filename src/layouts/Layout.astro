@@ -43,6 +43,7 @@ const { title } = Astro.props;
     font-family: "Quicksand", sans-serif;
     margin: 0;
   }
+
   main {
     padding-top: 70px;
   }
@@ -187,9 +188,6 @@ const { title } = Astro.props;
     text-align: center;
     font-size: var(--sm);
     color: var(--very-light-pink);
-  }
-
-  .main-container {
   }
 
   .cards-container {
@@ -472,9 +470,100 @@ const { title } = Astro.props;
     display: none;
   }
 
+  .product-detail {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 40px;
+    background-color: var(--white);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-detail .cover {
+    position: relative;
+  }
+
+  .close-icon {
+    position: absolute;
+    place-content: center;
+    top: 20px;
+    left: 8px;
+    height: 24px;
+    width: 24px;
+    display: grid;
+    border-radius: 50%;
+    font-size: var(--lg);
+    font-weight: bold;
+    color: var(--very-light-pink);
+    background: white;
+  }
+
+  .product-detail .cover img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .dots span {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--very-light-pink);
+  }
+
+  .dots span:nth-child(1) {
+    background-color: var(--hospital-green);
+  }
+
+  .product-detail .info {
+    padding: 12px;
+  }
+
+  .info p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .info p:nth-child(1) {
+    font-size: var(--md);
+    color: var(--black);
+  }
+
+  .info p:nth-child(2) {
+    font-size: var(--md);
+    margin-top: 4px;
+    color: var(--very-light-pink);
+  }
+
+  .info p:nth-child(3) {
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+    margin-top: 12px;
+  }
+
+  .info .primary-button{
+    width: 100%;
+    position: relative;
+    margin: 24px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
   @media (min-width: 768px) {
-    body {
-      padding-top: 20px;
+    main {
+      padding-top: 80px;
     }
 
     .logo {
@@ -538,6 +627,13 @@ const { title } = Astro.props;
 
     .navbar-right ul {
       gap: 24px;
+    }
+
+    .product-detail {
+      padding-top: 70px;
+      width: 360px;
+      position: absolute;
+      right: 0;
     }
   }
 </style>

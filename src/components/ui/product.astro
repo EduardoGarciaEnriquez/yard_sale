@@ -1,0 +1,33 @@
+---
+import PrimaryButton from "./primary_button.astro";
+import shoppingCartIcon from "../../assets/icons/bt_add_to_cart.svg"
+---
+
+<aside class="product-detail">
+  <div class="cover">
+    <div class="close-icon">X</div>
+    <img
+      src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      alt="cover-image"
+    />
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="info">
+    <p class="price"><b>$ 120.00</b></p>
+    <p class="title">Bike</p>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet maiores,
+      illo necessitatibus iure velit accusantium consequuntur quo corrupti
+      deserunt quas magnam fugit unde neque et optio quasi saepe aperiam
+      suscipit!
+    </p>
+    <PrimaryButton class="add-to-cart">
+      <img src={shoppingCartIcon.src} alt="shopping-cart-icon" />
+      Add to cart
+    </PrimaryButton>
+  </div>
+</aside>
