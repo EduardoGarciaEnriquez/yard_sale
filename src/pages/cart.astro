@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/DashboardLayout.astro";
+import closeIcon from "../assets/icons/icon_close.png";
+import PrimaryButton from "../components/ui/primary_button.astro";
+
+const ITEMS = [
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+  { price: 120.0, title: "Bike" },
+];
+
+const total = ITEMS.reduce(
+  (accumulator, currentValue) => accumulator + currentValue.price,
+  0
+);
+---
+
+<Layout title="Shopping cart | Yard Sale">
+  <div class="order-container">
+    <div class="order-list">
+      {
+        ITEMS.map(({ price, title }) => (
+          <div class="order-item">
+            <img
+              src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="item-image"
+            />
+            <div class="item-info">
+              <p>{title}</p>
+              <p>
+                $ {price}.00 <img src={closeIcon.src} alt="close-icon" />
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="order-info">
+      <p>Total</p>
+      <p>$ {total}.00</p>
+    </div>
+    <PrimaryButton>Checkout</PrimaryButton>
+  </div>
+</Layout>
